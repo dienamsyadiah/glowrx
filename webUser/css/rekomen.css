@@ -1,0 +1,214 @@
+/* CSS utama */
+body {
+    color: var(--default-color);
+    background-color: #fafafa;
+    font-family: var(--default-font);
+    margin: 0;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+/* Container utama */
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px; /* Mengurangi padding untuk menyempitkan header */
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Menggunakan flexbox untuk mengelompokkan logo, profil, dan navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.site-name {
+    margin: 0;
+    font-size: 28px; 
+    font-weight: bold;
+    margin-left: 10px; /* Jarak antara logo dan nama situs */
+}
+
+/* Profil */
+.profil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px; /* Jarak antara profil dan navigasi */
+}
+
+.profil .profile-pic {
+    width: 40px; /* Sesuaikan ukuran gambar profil */
+    height: 40px; /* Sesuaikan ukuran gambar profil */
+    border-radius: 50%; /* Untuk membuat gambar profil menjadi lingkaran */
+    margin-right: 10px;
+}
+
+.profil .username {
+    font-weight: bold;
+}
+
+/* Navigasi Utama */
+.main-nav {
+    display: flex; /* Menggunakan flexbox untuk menyusun menu navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; 
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #32475B;
+    color: #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle .bi-list {
+        font-size: 24px;
+    }
+}
+
+/* maincontent */
+.main{
+    width: 100%;
+}
+
+.main-content {
+    max-width: 80%;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.main-content:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333333;
+    font-size: 28px;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 10px;
+}
+.container {
+    margin-top: 20px;
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    /* margin: 20px auto;  */
+    width: 96%;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.custom-multi-select {
+    position: relative;
+    width: 100%;
+}
+
+.form-section select {
+    height: 30px;
+    width: calc(100% - 22px);
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-section textarea {
+    height: 100px;
+    width: 97%;
+    display: flex;
+}
+
+.checkbox-group {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+.checkbox-group label {
+    color: #626262;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}

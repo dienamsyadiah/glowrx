@@ -1,0 +1,235 @@
+/* CSS utama */
+body {
+    color: var(--default-color);
+    background-color: #fafafa;
+    font-family: var(--default-font);
+    margin: 0;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+/* Container utama */
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px; /* Mengurangi padding untuk menyempitkan header */
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Menggunakan flexbox untuk mengelompokkan logo, profil, dan navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.site-name {
+    margin: 0;
+    font-size: 28px; 
+    font-weight: bold;
+    margin-left: 10px; /* Jarak antara logo dan nama situs */
+}
+
+/* Profil */
+.profil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px; /* Jarak antara profil dan navigasi */
+}
+
+.profil .profile-pic {
+    width: 40px; /* Sesuaikan ukuran gambar profil */
+    height: 40px; /* Sesuaikan ukuran gambar profil */
+    border-radius: 50%; /* Untuk membuat gambar profil menjadi lingkaran */
+    margin-right: 10px;
+}
+
+.profil .username {
+    font-weight: bold;
+}
+
+/* Navigasi Utama */
+.main-nav {
+    display: flex; /* Menggunakan flexbox untuk menyusun menu navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; 
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #32475B;
+    color: #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle .bi-list {
+        font-size: 24px;
+    }
+}
+
+/* main isi content */
+
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+}
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+.cart th, .cart td {
+    padding: 10px;
+    text-align: left;
+    border: none;
+}
+
+.cart th {
+    background-color: #f0f0f0;
+}
+
+.cart img {
+    width: 80px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.item-details {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.item-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-quantity button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    width: 20px;
+    height: 20px;
+}
+
+.item-quantity input {
+    text-align: center;
+    width: 25px;
+    border: 1px solid #ddd;
+    height: 25px;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.total-price {
+    font-weight: bold;
+}
+
+.checkout-button {
+    background-color: #32475B;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.checkout-button:hover{
+    background-color: #4d7198;
+    color: #fff;
+}
+.item-details {
+    display: flex;
+    flex-direction: column;
+    width: 500px; /* Adjust width as needed */
+    padding-left: 10px; /* Adjust padding as needed */
+}
+
+.store-name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-name {
+    font-size: 0.9em;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

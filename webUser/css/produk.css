@@ -1,0 +1,258 @@
+/* CSS utama */
+body {
+    color: var(--default-color);
+    background-color: #fafafa;
+    font-family: var(--default-font);
+    margin: 0;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+/* Container utama */
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px; /* Mengurangi padding untuk menyempitkan header */
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Menggunakan flexbox untuk mengelompokkan logo, profil, dan navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.site-name {
+    margin: 0;
+    font-size: 28px; 
+    font-weight: bold;
+    margin-left: 10px; /* Jarak antara logo dan nama situs */
+}
+
+/* Profil */
+.profil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px; /* Jarak antara profil dan navigasi */
+}
+
+.profil .profile-pic {
+    width: 40px; /* Sesuaikan ukuran gambar profil */
+    height: 40px; /* Sesuaikan ukuran gambar profil */
+    border-radius: 50%; /* Untuk membuat gambar profil menjadi lingkaran */
+    margin-right: 10px;
+}
+
+.profil .username {
+    font-weight: bold;
+}
+
+/* Navigasi Utama */
+.main-nav {
+    display: flex; /* Menggunakan flexbox untuk menyusun menu navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; 
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #32475B;
+    color: #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle .bi-list {
+        font-size: 24px;
+    }
+}
+
+
+/* main */
+.main-title {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin: 20px 0;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.main-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #9fa7af;
+    margin: 10px auto;
+}
+
+
+
+
+.main {
+    padding-top: 40px; /* Adjust according to your header height */
+    padding-bottom: 40px;
+    margin: 10px;
+}
+
+.main-produk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+    overflow: hidden;
+}
+.product-card a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+.product-card a:hover {
+    text-decoration: none; /* Tetap menghilangkan garis bawah pada hover */
+}
+.product-card-link {
+    text-decoration: none; /* Menghilangkan garis bawah dari tautan */
+    color: inherit; /* Menggunakan warna teks yang diwarisi dari parent (biasanya hitam) */
+}
+
+.product-card-link:hover {
+    text-decoration: none; /* Tetap tidak ada garis bawah saat dihover */
+    color: inherit; /* Tetap menggunakan warna teks yang diwarisi dari parent saat dihover */
+}
+
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* General Button Styles */
+.button-group .btn-buy,
+.button-group .btn-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Buy Button Styles */
+.product-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+.button-group{
+    display: flex;
+    justify-content: center;
+}
+.btn-buy, .btn-cart {
+    display: inline-block;
+    text-decoration: none;
+    color: #32475B;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: 1px solid#32475B;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer; /* Menambahkan kursor pointer untuk tombol */
+}
+
+.btn-buy:hover, .btn-cart:hover {
+    background-color: #32475B;
+    color: #fff;
+}

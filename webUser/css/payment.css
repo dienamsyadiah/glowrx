@@ -1,0 +1,336 @@
+/* CSS utama */
+body {
+    color: var(--default-color);
+    background-color: #fafafa;
+    font-family: var(--default-font);
+    margin: 0;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+/* Container utama */
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px; /* Mengurangi padding untuk menyempitkan header */
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Menggunakan flexbox untuk mengelompokkan logo, profil, dan navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.site-name {
+    margin: 0;
+    font-size: 28px; 
+    font-weight: bold;
+    margin-left: 10px; /* Jarak antara logo dan nama situs */
+}
+
+/* Profil */
+.profil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px; /* Jarak antara profil dan navigasi */
+}
+
+.profil .profile-pic {
+    width: 40px; /* Sesuaikan ukuran gambar profil */
+    height: 40px; /* Sesuaikan ukuran gambar profil */
+    border-radius: 50%; /* Untuk membuat gambar profil menjadi lingkaran */
+    margin-right: 10px;
+}
+
+.profil .username {
+    font-weight: bold;
+}
+
+/* Navigasi Utama */
+.main-nav {
+    display: flex; /* Menggunakan flexbox untuk menyusun menu navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; 
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #32475B;
+    color: #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle .bi-list {
+        font-size: 24px;
+    }
+}
+
+
+/* cart */
+
+.cart-container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #32475B;
+    margin-bottom: 10px;
+}
+
+.address-section, .products-section, .message-section, .shipping-section, .total-section {
+    margin-bottom: 20px;
+}
+
+.address-section p {
+    margin: 5px 0;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.products-section .store-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.store-name {
+    font-weight: bold;
+}
+
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+}
+
+.product-details img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9f4ff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.total-section h2 {
+    color: #32475B;
+    margin: 10px;
+}
+
+.total-section p{
+    margin: 10px;
+}
+
+/* chekout */
+
+.checkout-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.summary-section{
+    text-align: right;
+}
+
+.coin-section p {
+    color: #999;
+}
+
+.payment-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price, .total-price {
+    float: right;
+}
+.summary-section {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.summary-section p, .summary-section h3 {
+    margin: 10px 0;
+}
+
+.summary-section, .summary-section {
+    margin-left: 80px; /* Jarak antara teks dan harga */
+    color: #999;
+}
+.price{
+    margin-left: 80px; /* Jarak antara teks dan harga */
+    color: #000000;
+}
+.total-price{
+    margin-left: 20px;
+}
+
+.total-price {
+    color: #32475B;
+    font-size: 1.5em;
+    justify-content: right;
+}
+.place-order-section {
+    display: flex;
+    justify-content: flex-end; /* memposisikan konten di ujung kanan */
+    margin-bottom: 20px;
+}
+
+.place-order-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color:#32475B; /* Warna latar belakang hijau */
+    color: #ffffff; /* Warna teks putih */
+    font-size: 18px; /* Ukuran font */
+    font-weight: bold; /* Teks tebal */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Kursor pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animasi transisi */
+    text-align: center; /* Teks rata tengah */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+.place-order-btn:hover {
+    background-color: #3e8cd4; /* Warna latar belakang saat hover */
+    transform: translateY(-2px); /* Efek naik saat hover */
+}
+
+/* pop itt */
+/* Pop-up styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

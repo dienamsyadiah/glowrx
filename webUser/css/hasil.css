@@ -1,0 +1,228 @@
+/* CSS utama */
+body {
+    color: var(--default-color);
+    background-color: #fafafa;
+    font-family: var(--default-font);
+    margin: 0;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+/* Container utama */
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px; /* Mengurangi padding untuk menyempitkan header */
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Menggunakan flexbox untuk mengelompokkan logo, profil, dan navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.site-name {
+    margin: 0;
+    font-size: 28px; 
+    font-weight: bold;
+    margin-left: 10px; /* Jarak antara logo dan nama situs */
+}
+
+/* Profil */
+.profil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px; /* Jarak antara profil dan navigasi */
+}
+
+.profil .profile-pic {
+    width: 40px; /* Sesuaikan ukuran gambar profil */
+    height: 40px; /* Sesuaikan ukuran gambar profil */
+    border-radius: 50%; /* Untuk membuat gambar profil menjadi lingkaran */
+    margin-right: 10px;
+}
+
+.profil .username {
+    font-weight: bold;
+}
+
+/* Navigasi Utama */
+.main-nav {
+    display: flex; /* Menggunakan flexbox untuk menyusun menu navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; 
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #32475B;
+    color: #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle .bi-list {
+        font-size: 24px;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Container utama untuk hasil rekomendasi */
+.container {
+    padding: 20px;
+}
+
+/* Konten wrapper untuk flex layout */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Konten produk */
+.product-content {
+    width: 35%;
+    text-align: center;
+    margin: 20px;
+}
+
+.product-info {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.btn-buy-form {
+    margin-top: 10px;
+}
+
+/* Konten deskripsi utama */
+.main-content-description {
+    width: 55%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.description-info h3 {
+    margin-top: 0;
+}
+
+.description-info p {
+    margin-bottom: 20px;
+}
+
+.btn-buy {
+    display: inline-block;
+    text-decoration: none;
+    color: #32475B;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: 1px solid#32475B;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer; /* Menambahkan kursor pointer untuk tombol */
+}
+
+.btn-buy:hover {
+    background-color: #32475B;
+    color: #fff;
+}

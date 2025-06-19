@@ -1,0 +1,297 @@
+/* CSS utama */
+body {
+    color: var(--default-color);
+    background-color: #fafafa;
+    font-family: var(--default-font);
+    margin: 0;
+}
+
+/* Header */
+#header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+}
+/* Container utama */
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px; /* Mengurangi padding untuk menyempitkan header */
+}
+
+/* Logo */
+.logo {
+    text-decoration: none;
+    color: #333;
+    display: flex; /* Menggunakan flexbox untuk mengelompokkan logo, profil, dan navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.site-name {
+    margin: 0;
+    font-size: 28px; 
+    font-weight: bold;
+    margin-left: 10px; /* Jarak antara logo dan nama situs */
+}
+
+/* Profil */
+.profil {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px; /* Jarak antara profil dan navigasi */
+}
+
+.profil .profile-pic {
+    width: 40px; /* Sesuaikan ukuran gambar profil */
+    height: 40px; /* Sesuaikan ukuran gambar profil */
+    border-radius: 50%; /* Untuk membuat gambar profil menjadi lingkaran */
+    margin-right: 10px;
+}
+
+.profil .username {
+    font-weight: bold;
+}
+
+/* Navigasi Utama */
+.main-nav {
+    display: flex; /* Menggunakan flexbox untuk menyusun menu navigasi */
+    align-items: center; /* Pusatkan vertikal */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px; 
+    padding: 5px 15px; 
+    border-radius: 5px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #32475B;
+    color: #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggle .bi-list {
+        font-size: 24px;
+    }
+}
+
+
+
+/* main */
+.main {
+    padding: 20px;
+}
+/* Gaya untuk tautan dengan ikon bx-arrow-back */
+.back-link {
+    display: inline-flex; /* Mengatur tautan sebagai elemen fleksibel */
+    align-items: center; /* Menyelaraskan ikon dan teks secara vertikal */
+    text-decoration: none; /* Menghapus garis bawah default */
+    color:#32475B; /* Warna teks */
+    padding: 8px 15px; /* Ruang di sekitar tautan */
+    border: 1px solid#32475B; /* Bingkai dengan warna yang sama */
+    border-radius: 5px; /* Sudut membulat */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi untuk hover */
+}
+
+.back-link i {
+    margin-right: 5px; /* Jarak antara ikon dan teks */
+}
+
+.back-link:hover {
+    background-color: #32475B; /* Warna latar belakang saat hover */
+    color: #fff; /* Warna teks saat hover */
+}
+
+/* detail produk */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff; /* Background color */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: Box shadow for depth */
+}
+
+
+.product-detail {
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.product-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; /* Product name color */
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #555; /* Description color */
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; /* Price color */
+    margin-bottom: 15px;
+}
+
+.button-group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-group i {
+    margin-left: 5px;
+}
+
+/* rekomendasi produk */
+.recommendation {
+    margin-top: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px; /* Spasi antar produk */
+}
+
+.product-card {
+    width: calc(50% - 10px); /* Lebar 50% dengan spasi antar produk */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-decoration: none; /* Menghapus dekorasi teks */
+    color: inherit; /* Menyelaraskan warna teks */
+    transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-details {
+    text-align: center;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #32475B; /* Adjust color as needed */
+    margin-bottom: 10px;
+}
+
+/* Menyembunyikan gaya default untuk elemen <a> di dalam .product-card */
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-buy, .btn-cart {
+    display: inline-block;
+    text-decoration: none;
+    color: #32475B;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: 1px solid#32475B;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer; /* Menambahkan kursor pointer untuk tombol */
+}
+
+.btn-buy:hover, .btn-cart:hover {
+    background-color: #32475B;
+    color: #fff;
+}
